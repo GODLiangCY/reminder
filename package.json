@@ -1,0 +1,74 @@
+{
+  "name": "reminder",
+  "displayName": "Reminder",
+  "version": "0.0.0",
+  "private": true,
+  "license": "MIT",
+  "description": "Just a simple reminder extension for VS Code",
+  "author": "GODLiangCY",
+  "publisher": "Young Liang",
+  "icon": "reminder.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GODLiangCY/reminder"
+  },
+  "bugs": {
+    "url": "https://github.com/GODLiangCY/reminder/issues"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/index.js",
+  "engines": {
+    "vscode": "^1.73.0"
+  },
+  "activationEvents": [
+    "*"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "reminder.stopReminding",
+        "title": "Stop reminding me",
+        "category": "Reminder"
+      },
+      {
+        "command": "reminder.recover",
+        "title": "Recover Reminder",
+        "category": "Reminder"
+      }
+    ],
+    "configuration": {
+      "title": "Reminder",
+      "properties": {
+        "reminder.disable": {
+          "type": "boolean",
+          "default": false,
+          "description": "Disable this Reminder extension"
+        },
+        "reminder.routine": {
+          "type": "array",
+          "markdownDescription": "Routines that Reminder will remind you of what you need to do at specific intervals.\n\nSee [Readme](https://github.com/GODLiangCY/reminder/blob/main/README.md) for more details."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "pnpm lint:fix",
+    "build": "tsup",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "bump": "bumpp"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.29.4",
+    "@types/node": "^18.11.9",
+    "@types/vscode": "^1.73.0",
+    "bumpp": "^8.2.1",
+    "eslint": "^8.27.0",
+    "esno": "^0.16.3",
+    "execa": "^6.1.0",
+    "tsup": "^6.4.0",
+    "typescript": "^4.8.4"
+  }
+}
