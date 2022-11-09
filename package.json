@@ -6,7 +6,7 @@
   "license": "MIT",
   "description": "Just a simple reminder extension for VS Code",
   "author": "GODLiangCY",
-  "publisher": "Young Liang",
+  "publisher": "godliangcy",
   "icon": "reminder.png",
   "repository": {
     "type": "git",
