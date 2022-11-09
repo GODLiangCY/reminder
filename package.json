@@ -58,13 +58,15 @@
     "build": "tsup",
     "lint": "eslint .",
     "lint:fix": "pnpm lint --fix",
-    "bump": "bumpp"
+    "bump": "bumpp",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^0.29.4",
     "@types/node": "^18.11.9",
     "@types/vscode": "^1.73.0",
     "bumpp": "^8.2.1",
+    "conventional-changelog-cli": "^2.2.2",
     "eslint": "^8.27.0",
     "esno": "^0.16.3",
     "execa": "^6.1.0",
