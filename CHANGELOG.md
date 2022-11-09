@@ -1,3 +1,12 @@
+## [0.1.2](https://github.com/GODLiangCY/reminder/compare/0.1.1...0.1.2) (2022-11-09)
+
+
+### Bug Fixes
+
+* correct git tag in publish script ([cf0eb16](https://github.com/GODLiangCY/reminder/commit/cf0eb16a49a00f08ba6021c67edb11e51d009e73))
+
+
+
 ## [0.1.1](https://github.com/GODLiangCY/reminder/compare/0.1.0...0.1.1) (2022-11-09)
 
 
