@@ -1,3 +1,12 @@
+## [0.1.1](https://github.com/GODLiangCY/reminder/compare/0.1.0...0.1.1) (2022-11-09)
+
+
+### Bug Fixes
+
+* adjust publish order ([611765c](https://github.com/GODLiangCY/reminder/commit/611765cb3519ff59ea017f9a2caa2d916785a7ae))
+
+
+
 # 0.1.0 (2022-11-09)
 
 
