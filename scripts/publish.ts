@@ -17,12 +17,16 @@ async function publish() {
   await execaCommand('git add .')
   await execa('git', ['commit', '-m', `"chore: release ${newVersion}"`])
 
-  step('push to GitHub\n')
+  step('git tagging\n')
   await execaCommand(`git tag -a ${newVersion} -m v${newVersion}`)
-  await execaCommand('git push origin main')
 
   step('push to VS Code extensions marketplace\n')
-  await execaCommand('vsce publish --no-dependencies', { cwd: root })
+  await execaCommand('vsce publish --no-dependencies', { cwd: root, stdio: 'inherit' })
+
+  step('push to GitHub\n')
+  await execaCommand('git add .')
+  await execaCommand('git commit --amend', { stdio: 'inherit' })
+  await execaCommand('git push origin main')
 }
 
 publish()
