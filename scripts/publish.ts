@@ -15,7 +15,7 @@ async function publish() {
 
   step('generate git commit\n')
   await execaCommand('git add .')
-  await execa('git', ['commit', '-m', `"chore: release ${newVersion}"`])
+  await execa('git', ['commit', '-m', `chore: release ${newVersion}`])
 
   step('push to VS Code extensions marketplace\n')
   await execaCommand('vsce publish --no-dependencies', { cwd: root, stdio: 'inherit' })
