@@ -1,13 +1,12 @@
 {
+  "publisher": "godliangcy",
   "name": "routine-reminder",
   "displayName": "Reminder",
   "version": "0.1.0",
   "private": true,
-  "license": "MIT",
   "description": "Just a simple reminder extension for VS Code",
   "author": "GODLiangCY",
-  "publisher": "godliangcy",
-  "icon": "reminder.png",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/GODLiangCY/reminder"
@@ -19,6 +18,7 @@
     "Other"
   ],
   "main": "./dist/index.js",
+  "icon": "reminder.png",
   "engines": {
     "vscode": "^1.73.0"
   },

@@ -12,7 +12,7 @@ If you have a `settings.json` like
       "interval": "15min",
       "description": "Drink 100ml of water"
     }
-  ],
+  ]
 }
 ```
 
