@@ -18,7 +18,7 @@ If you have a `settings.json` like
 
 And for every 15 minutes, you'll have a notify as below
 
-![](https://github.com/GODLiangCY/reminder/blob/main/preview.png)
+![](https://raw.githubusercontent.com/GODLiangCY/reminder/main/preview.png)
 
 ## Config
 
