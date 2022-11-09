@@ -5,6 +5,7 @@ specifiers:
   '@types/node': ^18.11.9
   '@types/vscode': ^1.73.0
   bumpp: ^8.2.1
+  chalk: ^5.1.2
   conventional-changelog-cli: ^2.2.2
   eslint: ^8.27.0
   esno: ^0.16.3
@@ -17,6 +18,7 @@ devDependencies:
   '@types/node': 18.11.9
   '@types/vscode': 1.73.0
   bumpp: 8.2.1
+  chalk: 5.1.2
   conventional-changelog-cli: 2.2.2
   eslint: 8.27.0
   esno: 0.16.3
@@ -632,6 +634,11 @@ packages:
     dependencies:
       ansi-styles: 4.3.0
       supports-color: 7.2.0
+    dev: true
+
+  /chalk/5.1.2:
+    resolution: {integrity: sha512-E5CkT4jWURs1Vy5qGJye+XwCkNj7Od3Af7CP6SujMetSMkLs8Do2RWJK5yx1wamHV/op8Rz+9rltjaTQWDnEFQ==}
+    engines: {node: ^12.17.0 || ^14.13 || >=16.0.0}
     dev: true
 
   /character-entities-legacy/1.1.4:
