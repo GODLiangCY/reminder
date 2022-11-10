@@ -26,6 +26,7 @@ export class Pool implements PoolImpl {
     this.ids.forEach((timer) => {
       clearInterval(timer)
     })
+    this.ids = []
   }
 
   recover() {
