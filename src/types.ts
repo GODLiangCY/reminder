@@ -18,4 +18,13 @@ export interface RoutineInfo {
    * Description of routine, will be shown as the main content of infomation
    */
   description?: string
+
+  /**
+   * Remind in silent version
+   *
+   * By default, notification will be shown in a modal.
+   * Setting true will notify as a message.
+   * @default false
+   */
+  silent?: boolean
 }

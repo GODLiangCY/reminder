@@ -1,3 +1,20 @@
+<br>
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/GODLiangCY/reminder/main/reminder.png" style="width:100px;" height="128" />
+</p>
+
+<h1 align="center">Reminder</h1>
+
+<p align="center">
+<a href="https://marketplace.visualstudio.com/items?itemName=GODLiangCY.routine-reminder" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/GODLiangCY.routine-reminder.svg?color=eee&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
+</p>
+
+<p align="center">
+<a href="https://github.com/GODLiangCY/reminder/blob/main/README.md">English</a>
+<a href="https://github.com/GODLiangCY/reminder/blob/main/README-zh.md">中文</a>
+</p>
+
 ## 关于
 
 提醒你一些事情
@@ -57,6 +74,15 @@
         * Description of routine, will be shown as the main content of infomation
         */
        description?: string
+     
+       /**
+        * Remind in silent version
+        *
+        * By default, notification will be shown in a modal.
+        * Setting true will notify as a message.
+        * @default false
+        */
+       silent?: boolean
      }
      ```
      

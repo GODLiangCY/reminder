@@ -38,8 +38,8 @@ export class Pool implements PoolImpl {
   #_register() {
     this.ids = []
     this.routines.forEach((routine) => {
-      const { interval, name, description } = routine
-      const ops: MessageOptions = { modal: true }
+      const { interval, name, description, silent } = routine
+      const ops: MessageOptions = { modal: !silent }
       if (description)
         Object.assign(ops, { detail: description } as MessageOptions)
 
