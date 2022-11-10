@@ -1,16 +1,3 @@
-import type { MessageOptions } from 'vscode'
-import { window } from 'vscode'
-
-const { showInformationMessage } = window
-
-export function showInfo({ title, desc }: { title: string; desc?: string }) {
-  const ops: MessageOptions = { modal: true }
-  if (desc)
-    Object.assign(ops, { detail: desc } as MessageOptions)
-
-  showInformationMessage(title, ops)
-}
-
 const minToMs = 60 * 1000
 const secToMs = 1000
 const hrToMs = 60 * 60 * 1000
