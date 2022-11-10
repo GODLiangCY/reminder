@@ -1,3 +1,19 @@
+# [0.2.0](https://github.com/GODLiangCY/reminder/compare/0.1.2...0.2.0) (2022-11-10)
+
+
+### Bug Fixes
+
+* recover command not working ([6c083b3](https://github.com/GODLiangCY/reminder/commit/6c083b35537638008296c0440544fe15c11c2f0e))
+* remove redundant code ([ce02166](https://github.com/GODLiangCY/reminder/commit/ce021669b93621ca4f609fb880690b59cbda004e))
+* remove the extra double quotes in commit message ([490241b](https://github.com/GODLiangCY/reminder/commit/490241bb0a846cfa641942a06bec09f41da0766f))
+
+
+### Features
+
+* silent option ([77f9c2a](https://github.com/GODLiangCY/reminder/commit/77f9c2aac9f6418849c94054fed93b67bc18ffb5))
+
+
+
 ## [0.1.2](https://github.com/GODLiangCY/reminder/compare/0.1.1...0.1.2) (2022-11-09)
 
 
