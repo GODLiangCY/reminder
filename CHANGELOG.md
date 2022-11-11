@@ -1,3 +1,12 @@
+## [0.2.2](https://github.com/GODLiangCY/reminder/compare/0.2.1...0.2.2) (2022-11-11)
+
+
+### Features
+
+* allow stop reminder on modal ([14d3545](https://github.com/GODLiangCY/reminder/commit/14d3545380e2feb3a7102da4e6aa4f5de3666b2e))
+
+
+
 ## [0.2.1](https://github.com/GODLiangCY/reminder/compare/0.2.0...0.2.1) (2022-11-11)
 
 

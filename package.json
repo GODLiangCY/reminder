@@ -2,7 +2,7 @@
   "publisher": "godliangcy",
   "name": "routine-reminder",
   "displayName": "Reminder",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "private": true,
   "description": "Just a simple reminder extension for VS Code",
   "author": "GODLiangCY",
