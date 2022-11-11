@@ -6,7 +6,6 @@ import { parseInterval } from './utils'
 interface PoolImpl {
   ids: NodeJS.Timer[]
   routines: RoutineInfo[]
-  cleanup(): void
   register(routine: RoutineInfo[]): void
   stop(): void
   recover(): void
@@ -49,10 +48,5 @@ export class Pool implements PoolImpl {
       }, parseInterval(interval))
       this.ids.push(timer)
     })
-  }
-
-  cleanup() {
-    this.stop()
-    this.routines = []
   }
 }

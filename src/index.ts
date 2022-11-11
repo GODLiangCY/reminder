@@ -5,7 +5,7 @@ import { log } from './log'
 import type { RoutineInfo } from './types'
 import { Pool } from './pool'
 
-let pool = new Pool()
+const pool = new Pool()
 
 export function activate(ext: ExtensionContext) {
   log.appendLine(`[${new Date().toLocaleTimeString()}] Reminder for VS Code, v${version}\n`)
@@ -40,7 +40,4 @@ export function activate(ext: ExtensionContext) {
   subscriptions.push(disposeRecover)
 }
 
-export function deactivate() {
-  pool.cleanup()
-  pool = null
-}
+export function deactivate() {}
