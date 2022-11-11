@@ -1,52 +1,48 @@
 import type { MessageOptions } from 'vscode'
 import { window } from 'vscode'
+import type { Ref } from '@vue/runtime-core'
+import { ref, watchEffect } from '@vue/runtime-core'
 import type { RoutineInfo } from './types'
-import { parseInterval } from './utils'
+import { parseInterval, sleep } from './utils'
 
 interface PoolImpl {
-  ids: NodeJS.Timer[]
-  routines: RoutineInfo[]
+  isStoped: Ref<boolean>
   register(routine: RoutineInfo[]): void
   stop(): void
   recover(): void
 }
 
 export class Pool implements PoolImpl {
-  ids: NodeJS.Timer[] = []
-  routines: RoutineInfo[] = []
-
-  constructor() {}
+  isStoped = ref(false)
 
   register(routines: RoutineInfo[]) {
-    this.routines = routines
-    this.#_register()
+    this.#_register(routines)
   }
 
   stop() {
-    this.ids.forEach((timer) => {
-      clearInterval(timer)
-    })
-    this.ids = []
+    this.isStoped.value = true
   }
 
   recover() {
-    if (this.ids.length)
-      return
-    this.#_register()
+    this.isStoped.value = false
   }
 
-  #_register() {
-    this.ids = []
-    this.routines.forEach((routine) => {
+  #_register(routines: RoutineInfo[]) {
+    routines.forEach((routine) => {
       const { interval, name, description, silent } = routine
       const ops: MessageOptions = { modal: !silent }
       if (description)
         Object.assign(ops, { detail: description } as MessageOptions)
 
-      const timer = setInterval(async () => {
-        await window.showInformationMessage(name, ops)
-      }, parseInterval(interval))
-      this.ids.push(timer)
+      const remind = async () => {
+        await sleep(parseInterval(interval))
+        await window.showInformationMessage(name, ops).then(remind)
+      }
+
+      watchEffect(() => {
+        if (!this.isStoped.value)
+          remind()
+      })
     })
   }
 }

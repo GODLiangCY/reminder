@@ -46,3 +46,7 @@ export function parseInterval(val: string | number) {
   }
   else { throw new TypeError('The interval value is not valid') }
 }
+
+export async function sleep(ms: number) {
+  return new Promise(resolve => setTimeout(resolve, ms))
+}
