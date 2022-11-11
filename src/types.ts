@@ -9,8 +9,8 @@ export interface RoutineInfo {
    *
    * If it's a number, then the unit is minutes.
    * And if it's a plain string, the unit is also minutes.
-   * Otherwise, the unit must be one of ['ms', 'sec', 'secs', 'min', 'mins', 'hr',
-   * 'hrs']
+   * Otherwise, the unit must be one of ['ms', 's', 'sec', 'secs', 'm', 'min', 'mins',
+   * 'h', 'hr', 'hrs']
    */
   interval: number | string
 

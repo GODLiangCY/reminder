@@ -4,6 +4,7 @@ import type { Ref } from '@vue/runtime-core'
 import { ref, watchEffect } from '@vue/runtime-core'
 import type { RoutineInfo } from './types'
 import { parseInterval, sleep } from './utils'
+import { log } from './log'
 import { pool } from './index'
 
 interface PoolImpl {
@@ -35,8 +36,18 @@ export class Pool implements PoolImpl {
       if (description)
         Object.assign(ops, { detail: description } as MessageOptions)
 
+      let _interval: undefined | number
+      try {
+        _interval = parseInterval(interval)
+      }
+      catch (e: unknown) {
+        log.appendLine(`the value of interval config for ${name} is not valid`)
+        return
+      }
+
       const remind = async () => {
-        await sleep(parseInterval(interval))
+        await sleep(_interval)
+
         await window.showInformationMessage(name, ops, 'OK', 'Stop reminding me in the rest time').then((res) => {
           if (res !== 'Stop reminding me in the rest time')
             remind()
