@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/GODLiangCY/reminder/compare/0.2.0...0.2.1) (2022-11-11)
+
+
+### Bug Fixes
+
+* cleanup pool on `deactivate` ([5a1f7c4](https://github.com/GODLiangCY/reminder/commit/5a1f7c4347ae8d0461f1c9eb36bdeedd28f5844d))
+
+
+
 # [0.2.0](https://github.com/GODLiangCY/reminder/compare/0.1.2...0.2.0) (2022-11-10)
 
 
