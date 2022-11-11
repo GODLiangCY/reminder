@@ -5,7 +5,7 @@ import { log } from './log'
 import type { RoutineInfo } from './types'
 import { Pool } from './pool'
 
-const pool = new Pool()
+export const pool = new Pool()
 
 export function activate(ext: ExtensionContext) {
   log.appendLine(`[${new Date().toLocaleTimeString()}] Reminder for VS Code, v${version}\n`)

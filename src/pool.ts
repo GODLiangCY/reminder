@@ -4,6 +4,7 @@ import type { Ref } from '@vue/runtime-core'
 import { ref, watchEffect } from '@vue/runtime-core'
 import type { RoutineInfo } from './types'
 import { parseInterval, sleep } from './utils'
+import { pool } from './index'
 
 interface PoolImpl {
   isStoped: Ref<boolean>
@@ -36,7 +37,13 @@ export class Pool implements PoolImpl {
 
       const remind = async () => {
         await sleep(parseInterval(interval))
-        await window.showInformationMessage(name, ops).then(remind)
+        await window.showInformationMessage(name, ops, 'OK', 'Stop reminding me in the rest time').then((res) => {
+          if (res !== 'Stop reminding me in the rest time')
+            remind()
+
+          else
+            pool.stop()
+        })
       }
 
       watchEffect(() => {
