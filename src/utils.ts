@@ -2,12 +2,14 @@ const minToMs = 60 * 1000
 const secToMs = 1000
 const hrToMs = 60 * 60 * 1000
 
+export const intervalRe = /(\d+\.?\d*)([a-z|\s]*)$/
+
 export function parseInterval(val: string | number) {
   if (typeof val === 'number')
     return minToMs * val
 
-  const value = Number(val.match(/(.*?)([a-z]*)$/)[1])
-  const suffix = val.match(/(.*?)([a-z]*)$/)[2]
+  const value = Number(val.match(intervalRe)[1])
+  const suffix = val.match(intervalRe)[2].trim()
   if (!suffix)
     return value * minToMs
 
