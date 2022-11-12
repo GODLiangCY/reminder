@@ -36,6 +36,11 @@
         "command": "reminder.recover",
         "title": "Recover Reminder",
         "category": "Reminder"
+      },
+      {
+        "command": "reminder.remindMeOnceLater",
+        "title": "Remind me once later",
+        "category": "Reminder"
       }
     ],
     "configuration": {

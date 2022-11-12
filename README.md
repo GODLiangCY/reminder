@@ -12,8 +12,10 @@
 
 <p align="center">
 <a href="https://github.com/GODLiangCY/reminder/blob/main/README.md">English</a>
+|
 <a href="https://github.com/GODLiangCY/reminder/blob/main/README-zh.md">中文</a>
 </p>
+
 
 ## About
 
@@ -91,15 +93,7 @@ After setting up some simple configurations, you can start using Reminder as you
 
 ## Command
 
-Reminder also provides some simple commands for you.
-
-1. `reminder.stopReminding`
-
-   Reminder will stop reminding until you command `reminder.recover` or restart this extension.
-
-2. `reminder.recover`
-
-   Recover Reminder.
+Reminder also provides some simple commands for you, like stop or recover Reminder and so on. Feel free to explore it.
 
 ## Credits
 

@@ -9,11 +9,12 @@
 <p align="center">
 <a href="https://marketplace.visualstudio.com/items?itemName=GODLiangCY.routine-reminder" target="__blank"><img src="https://img.shields.io/visual-studio-marketplace/v/GODLiangCY.routine-reminder.svg?color=eee&amp;label=VS%20Code%20Marketplace&logo=visual-studio-code" alt="Visual Studio Marketplace Version" /></a>
 </p>
-
 <p align="center">
 <a href="https://github.com/GODLiangCY/reminder/blob/main/README.md">English</a>
+|
 <a href="https://github.com/GODLiangCY/reminder/blob/main/README-zh.md">中文</a>
 </p>
+
 
 ## 关于
 
@@ -92,15 +93,7 @@
 
 ## 命令
 
-Reminder 也为你提供了一些命令.
-
-1. `reminder.stopReminding`
-
-   Reminder 会停止提醒你, 直到你输入 `reminder.recover` 命令或重新启动该拓展
-
-2. `reminder.recover`
-
-   恢复 Reminder
+Reminder 也为你提供了一些命令,像停止或者恢复 Reminder 之类. 你可以随意探索
 
 ## 致谢
 

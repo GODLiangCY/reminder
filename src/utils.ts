@@ -1,10 +1,10 @@
-const minToMs = 60 * 1000
-const secToMs = 1000
-const hrToMs = 60 * 60 * 1000
+export const minToMs = 60 * 1000
+export const secToMs = 1000
+export const hrToMs = 60 * 60 * 1000
 
 export const intervalRe = /(\d+\.?\d*)([a-z|\s]*)$/
 
-export function parseInterval(val: string | number) {
+export function parseIntervalToMs(val: string | number) {
   if (typeof val === 'number')
     return minToMs * val
 
