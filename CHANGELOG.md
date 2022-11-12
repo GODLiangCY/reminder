@@ -1,3 +1,14 @@
+## [0.2.3](https://github.com/GODLiangCY/reminder/compare/0.2.2...0.2.3) (2022-11-12)
+
+
+### Features
+
+* command for add one-time event reminder ([8d87a3b](https://github.com/GODLiangCY/reminder/commit/8d87a3b0e52c7cfdbb13720f22794546f4611772))
+* improve RegExp ([728440f](https://github.com/GODLiangCY/reminder/commit/728440fb238cbd172386494ff6aa75acba9d16a5))
+* support more formats for interval config ([37ba863](https://github.com/GODLiangCY/reminder/commit/37ba863c78f41e1d4e0ab5a6c31b7b6fe4fe569a))
+
+
+
 ## [0.2.2](https://github.com/GODLiangCY/reminder/compare/0.2.1...0.2.2) (2022-11-11)
 
 
